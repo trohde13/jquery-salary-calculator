@@ -10,14 +10,16 @@ $(document).ready(handleReady);
 function handleReady(){
     console.log('jquery is ready')
 
-     renderToDom();
+    renderToDom();
+    //calcTotale();
 
     //click listeners
     $('#submitButton').on('click', handleClick);
 
- 
+    //delete button click listener
+    $('#employeeList').on('click', "#deleteButton", deleteEmployee);
 
-    $('#deleteButton').on('click', deleteRow);
+    
 
 }; //end handleReady
 
@@ -40,6 +42,8 @@ function renderToDom(){
         //adds to DOM
         $('#employeeList').append(employeeRow);
     }
+
+    
 
  }; //end renderToDom
 
@@ -68,10 +72,12 @@ function handleClick(){
 
 }; //end handleClick
 
-function deleteRow (){
+function deleteEmployee (){
     console.log('clicked delete');
-    $(this).closest('tr').remove();
-}
+
+    $(this).parent().parent().remove();
+ 
+}; //end deleteEmployee
 
 function clearInputs(){
     $('#firstNameIn').val('');
@@ -82,7 +88,13 @@ function clearInputs(){
 
 }; //end clearInputs
 
+function calcMonthly(){
 
+    let sum = 0;
+    for(let employee of employees){
+        
+    }
+}
 
 
 
