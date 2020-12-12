@@ -11,7 +11,9 @@ function handleReady(){
     console.log('jquery is ready')
 
     renderToDom();
-    //calcTotale();
+    
+    //calling function to total annual salaries and return monthly total on DOM
+    totalSalary();
 
     //click listeners
     $('#submitButton').on('click', handleClick);
@@ -76,6 +78,7 @@ function deleteEmployee (){
     console.log('clicked delete');
 
     $(this).parent().parent().remove();
+
  
 }; //end deleteEmployee
 
@@ -88,13 +91,28 @@ function clearInputs(){
 
 }; //end clearInputs
 
-function calcMonthly(){
+function totalSalary(){
 
-    let sum = 0;
+    //let monthlyCosts = $('monthlyCosts');
+    let employeeSalaries = 0;
+
     for(let employee of employees){
-        
+        employeeSalaries += Number(employee.annualSalary);
+        console.log ('sum', employeeSalaries);
     }
-}
+
+    //console.log(allSalaries);
+    let totalCosts = annualSalary / 12;
+    monthlyCosts.empty();
+    monthlyCosts.append("Total Cost:", totalCost.toFixed(2));
+
+    let total = sum / 12;
+    
+}; //end calcMonthly
+console.log('total', totalSalary)
+// let totalSalary = $('#monthlyTotal');
+// totalSalary.empty();
+// $('#monthlyTotal').append()
 
 
 
