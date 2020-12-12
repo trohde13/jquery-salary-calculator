@@ -54,26 +54,46 @@
 
 
 <!-- Submit Button -->
-        <button class="btn" id="submitButton">Submit</button>
+        <div>
+            <button class="btn btn-outline-success" id="submitButton">Submit</button>
+        </div>
 
+<!-- Title for Table -->
+
+        <div>
+            <h3>Employee List</h3>
+        </div>
 
 <!-- Table for Employee Info -->
 
-        <table class="table table-hover table-striped">
-            <thead>
-                <tr>First Name</tr>
-                <tr>Last Name</tr>
-                <tr>Employee ID</tr>
-                <tr>Title</tr>
-                <tr>Salary</tr>
-            </thead>
-            <tbody id="employeeList">
-                <!-- This is where info will be added -->
-            </tbody>
+        <table class="table table-bordered table-striped">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead scope="col" class="table-dark">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Employee ID</th>
+                        <th>Title</th>
+                        <th>Salary</th>
+                        <th></th>
+                    </thead>
+                    <tbody id="employeeList">
+                        <tr class="food">
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                        <!-- This is where info will be added -->
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </table>
 
 <!-- Delete Buttons -->
-
+        <button class="btn btn-outline-success" id="deleteButton">Delete</button>
 
 <!-- Calculation for Monthly Totals -->
 

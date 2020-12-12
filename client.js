@@ -10,18 +10,18 @@ $(document).ready(handleReady);
 function handleReady(){
     console.log('jquery is ready')
 
-     renderToDOM();
+     renderToDom();
 
     //click listeners
     $('#submitButton').on('click', handleClick);
 
-    $('#employeeList').on('click', '.employee', , handleEmployeeClick);
+    $('#employeeList').on('click', '.employee', handleEmployeeClick);
 
 }; //end handleReady
 
 function renderToDom(){
 
-    $('employeeList').empty();
+    $('#employeeList').empty();
 
     for(let employee of employees){
 
@@ -32,7 +32,7 @@ function renderToDom(){
                 <td>${employee.id}</td>
                 <td>${employee.title}</td>
                 <td>${employee.annualSalary}</td>
-        </tr>`);
+            </tr>`);
 
         //adds to DOM
         $('employeeList').append(employeeRow);
@@ -52,17 +52,28 @@ function handleClick(){
     let newEmployee = {
         firstName: $('#firstNameIn').val(),
         lastName: $('#lastNameIn').val(),
-        id: $('idIn').val(),
-        title: $('titleIn').val(),
-        annualSalary: $('annualSalaryIn').val(),
+        id: $('#idIn').val(),
+        title: $('#titleIn').val(),
+        annualSalary: $('#annualSalaryIn').val(),
     };
     console.log(newEmployee); //check input in console
     employees.push(newEmployee); //pushes newEmployee object to array
 
     renderToDom(); //calls renderToDom to run function to append to table
 
+    clearInputs(); //calls clearInputs to clear imput fields on DOM
+
 
 }; //end handleClick
+
+function clearInputs(){
+    $('#firstNameIn').val('');
+    $('#lastNameIn').val('');
+    $('#idIn').val('');
+    $('#titleIn').val('');
+    $('#annualSalaryIn').val('');
+
+}; //end clearInputs
 
 
 
