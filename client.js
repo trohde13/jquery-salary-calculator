@@ -10,17 +10,40 @@ $(document).ready(handleReady);
 function handleReady(){
     console.log('jquery is ready')
 
-    renderToDOM();
+     renderToDOM();
 
     //click listeners
     $('#submitButton').on('click', handleClick);
+
+    $('#employeeList').on('click', '.employee', , handleEmployeeClick);
 
 }; //end handleReady
 
 function renderToDom(){
 
+    $('employeeList').empty();
 
-}; //end renderToDom
+    for(let employee of employees){
+
+        let employeeRow = $(`
+            <tr class="employee">
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.id}</td>
+                <td>${employee.title}</td>
+                <td>${employee.annualSalary}</td>
+        </tr>`);
+
+        //adds to DOM
+        $('employeeList').append(employeeRow);
+    }
+
+ }; //end renderToDom
+
+ function handleEmployeeClick(){
+     console.log('clicked an Employee');
+
+ }; //end handleEmployeeClick
 
 function handleClick(){
     console.log('clicked submit');
@@ -29,9 +52,9 @@ function handleClick(){
     let newEmployee = {
         firstName: $('#firstNameIn').val(),
         lastName: $('#lastNameIn').val(),
-        idIn: $('idIn').val(),
-        titleIn: $('titleIn').val(),
-        annualSalaryIn: $('annualSalaryIn').val(),
+        id: $('idIn').val(),
+        title: $('titleIn').val(),
+        annualSalary: $('annualSalaryIn').val(),
     };
     console.log(newEmployee); //check input in console
     employees.push(newEmployee); //pushes newEmployee object to array
