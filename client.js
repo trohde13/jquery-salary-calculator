@@ -15,7 +15,9 @@ function handleReady(){
     //click listeners
     $('#submitButton').on('click', handleClick);
 
-    $('#employeeList').on('click', '.employee', handleEmployeeClick);
+ 
+
+    $('#deleteButton').on('click', deleteRow);
 
 }; //end handleReady
 
@@ -32,21 +34,19 @@ function renderToDom(){
                 <td>${employee.id}</td>
                 <td>${employee.title}</td>
                 <td>${employee.annualSalary}</td>
+                <td><button class="btn btn-outline-success" id="deleteButton">Delete</button></td>
             </tr>`);
 
         //adds to DOM
-        $('employeeList').append(employeeRow);
+        $('#employeeList').append(employeeRow);
     }
 
  }; //end renderToDom
 
- function handleEmployeeClick(){
-     console.log('clicked an Employee');
-
- }; //end handleEmployeeClick
+ 
 
 function handleClick(){
-    console.log('clicked submit');
+    console.log('clicked submit', employees);
 
     //adds employee info from inputs to employees array
     let newEmployee = {
@@ -55,6 +55,8 @@ function handleClick(){
         id: $('#idIn').val(),
         title: $('#titleIn').val(),
         annualSalary: $('#annualSalaryIn').val(),
+        
+        
     };
     console.log(newEmployee); //check input in console
     employees.push(newEmployee); //pushes newEmployee object to array
@@ -65,6 +67,11 @@ function handleClick(){
 
 
 }; //end handleClick
+
+function deleteRow (){
+    console.log('clicked delete');
+    $(this).closest('tr').remove();
+}
 
 function clearInputs(){
     $('#firstNameIn').val('');
