@@ -38,7 +38,7 @@ function renderToDom(){
                 <td>${employee.id}</td>
                 <td>${employee.title}</td>
                 <td>${employee.annualSalary}</td>
-                <td><button class="btn btn-outline-success" id="deleteButton">Delete</button></td>
+                <td><button type="submit" class="btn btn-primary" id="deleteButton">Delete</button></td>
             </tr>`);
 
         //adds to DOM

@@ -1,3 +1,28 @@
 body {
-    background: linear-gradient (to bottom, #33ccff 0%, #ff99cc 100%);
+    background-color: #056180;
+}
+
+header {
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    box-shadow: 0 2px 3px #291528;
+
+}
+h3 {
+    margin: 1px;
+    padding: 30px 5px 3px;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    border-radius: 3px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0 4px 6px #291528;
+}
+
+#submitButton {
+    background-color: #33ccff;
+   
+}
+
+#deleteButton {
+    background-color: #33ccff;
+    
 }
