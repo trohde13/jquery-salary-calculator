@@ -1,14 +1,3 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
-## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
-
-
 # SALARY CALCULATOR
 
 ## Description
@@ -18,7 +7,6 @@ _Duration: 48 Hours_
 This is a Salary Calculator class project completed during a weekend project sprint. The base functionality of the calculator allows employee inputs for First Name, Last Name, Job Title, Employee ID, and Annual Salary. These inputs are added to a table, and as they are added, the annual salaries are calculated out to display the total monthly costs associated with the employees below the table. If the costs are larger than a particular threshold (in this case, $20000 for the month) then the total monthly cost displayed will be highlighted red to draw attention to it.
 
 
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
 
 ## Screen Shot
 
