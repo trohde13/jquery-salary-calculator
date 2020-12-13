@@ -43,6 +43,8 @@ function renderToDom(){
 
         //adds to DOM
         $('#employeeList').append(employeeRow);
+
+        totalSalary();
     }
 
     
@@ -94,27 +96,31 @@ function clearInputs(){
 function totalSalary(){
 
     let employeeSalaries = 0;
-    for(employee of employees){
+    for(let employee of employees){
 
-        employeeSalaries += Number(employees[i].annualSalary);
+        employeeSalaries += Number(employee.annualSalary);
     }
 
     // return employeeSalaries;
 
-    let total = employeeSalaries / 12;
-    // $('#monthlyTotal').empty();
-    // $('#monthlyTotal').append();
-    return total;
+    employeeSalaries = employeeSalaries / 12;
+    let totalMonthly = $('#monthlyTotal');
+    
+   
+    totalMonthly.empty();
+
+    
+    totalMonthly.append(Math.ceil(employeeSalaries));
+
+
+    if(employeeSalaries >= 20000){
+        $('#monthlyTotal').addClass("overBudget")
+        }else if(employeeSalaries >= 20000){
+       $('#monthlyTotal').removeClass("underBudget")
+    }
+    console.log(employeeSalaries);
 
 }; //end totalSalary
-
-    // let totalySalary = $('#monthlyTotal');
-    // totalSalary.empty();
-    $('#monthlyTotal').append(`${totalSalary}`);
-
-// console.log(totalSalary);
-
-
 
 
 

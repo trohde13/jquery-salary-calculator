@@ -20,7 +20,7 @@
     <main>
 <!-- Title for Inputs -->
         <div>
-            <h3>Add Employee</h3>
+            <h3 class="titles">Add Employee</h3>
         </div>
 <!-- Input Fields -->
         <div class="row">
@@ -59,7 +59,7 @@
 <!-- Title for Table -->
 
         <div>
-            <h3>Employee List</h3>
+            <h3 class="titles">Employee List</h3>
         </div>
 
 <!-- Table for Employee Info -->
@@ -75,14 +75,14 @@
                         <th>AnnualSalary</th>
                         <th> </th>
                     </thead>
-                    <tbody id="employeeList">
+                    <tbody scope="col" table class="table table-dark table-striped" id="employeeList">
                         <tr class="currentRow">
+                            <!-- <th scope="row"></th>
                             <th scope="row"></th>
                             <th scope="row"></th>
                             <th scope="row"></th>
                             <th scope="row"></th>
-                            <th scope="row"></th>
-                            <th scope="row"></th>
+                            <th scope="row"></th> -->
                         <!-- This is where info will be added -->
                     </tr>
                     </tbody>
@@ -95,7 +95,7 @@
 
 <!-- Calculation for Monthly Totals -->
         <div class="totaler">
-            <div><h3>Total Monthly:</h3><p id="monthlyTotal"></p</div>
+            <div><h3>Total Monthly:  <span id="monthlyTotal"></span></h3></div>
         </div>
     </main>
 
