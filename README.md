@@ -22,8 +22,8 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 ## Screen Shot
 
-![Wireframe](Salary-Calculator-on-budget.jpg)
-![Wireframe](Salary-Calculator-over-budget.jpg)
+![Wireframe](Salary-Calculator-on-budget.png)
+![Wireframe](Salary-Calculator-over-budget.png)
 
 
 ### Prerequisites
