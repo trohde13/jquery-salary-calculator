@@ -93,26 +93,27 @@ function clearInputs(){
 
 function totalSalary(){
 
-    //let monthlyCosts = $('monthlyCosts');
     let employeeSalaries = 0;
+    for(employee of employees){
 
-    for(let employee of employees){
-        employeeSalaries += Number(employee.annualSalary);
-        console.log ('sum', employeeSalaries);
+        employeeSalaries += Number(employees[i].annualSalary);
     }
 
-    //console.log(allSalaries);
-    let totalCosts = annualSalary / 12;
-    monthlyCosts.empty();
-    monthlyCosts.append("Total Cost:", totalCost.toFixed(2));
+    // return employeeSalaries;
 
-    let total = sum / 12;
-    
-}; //end calcMonthly
-console.log('total', totalSalary)
-// let totalSalary = $('#monthlyTotal');
-// totalSalary.empty();
-// $('#monthlyTotal').append()
+    let total = employeeSalaries / 12;
+    // $('#monthlyTotal').empty();
+    // $('#monthlyTotal').append();
+    return total;
+
+}; //end totalSalary
+
+    // let totalySalary = $('#monthlyTotal');
+    // totalSalary.empty();
+    $('#monthlyTotal').append(`${totalSalary}`);
+
+// console.log(totalSalary);
+
 
 
 
